@@ -22,7 +22,7 @@
 #include <utility>
 
 // Constante para el limite de strings por lista
-const int MAX_JUEGOS = 500;
+const int MAX_JUEGOS = 100;
 
 // Funciones auxiliares
 
@@ -129,9 +129,9 @@ std::string mostrarDetallesEstandar(Estandar &e) {
 int main() {
 
   // Variables y arreglos
-  static Rpg rpgs[MAX_JUEGOS];
-  static Ranked rankeds[MAX_JUEGOS];
-  static Estandar estandars[MAX_JUEGOS];
+  Rpg rpgs[MAX_JUEGOS];
+  Ranked rankeds[MAX_JUEGOS];
+  Estandar estandars[MAX_JUEGOS];
 
   // Numero total de videojuegos por clase
   int totalRpgs = 0;
