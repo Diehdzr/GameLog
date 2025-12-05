@@ -1,0 +1,5 @@
+BasedOnStyle: LLVM
+ColumnLimit: 80
+AllowShortBlocksOnASingleLine: Never
+IndentAccessModifiers: true
+IndentCaseLabels: true
