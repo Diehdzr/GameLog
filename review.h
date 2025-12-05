@@ -1,7 +1,20 @@
+/*
+ * Proyecto GameLog
+ * Diego Hernández Rangel
+ * A01710524
+ * 5/12/2025
+ */
+
+/*
+ * Clase Review que contiene los metodos para agregar un rating
+ * y comentario, junto con metodos para modificarlos.
+ */
+
 #ifndef REVIEW_H
 #define REVIEW_H
 #include <string>
 
+//Declaración de la clase Review
 class Review {
     private:
     //Atributos
@@ -9,9 +22,11 @@ class Review {
     std::string comentario;
 
     public:
-    //Constructores
-    Review() : rating(0), comentario("") {};
-    Review(int ra, std::string cm) : rating(ra), comentario(cm) {};
+    //Constructor vacío
+    Review() : rating(0), comentario(""){};
+
+    //Constructor con parametros
+    Review(int ra, std::string cm) : rating(ra), comentario(cm){};
 
     //Declarar getters
     int getRating();
@@ -20,36 +35,50 @@ class Review {
     //Declarar setters
     void setRating(int r);
     void setComentario(std::string c);
-
-    //Metodos de actualizacion
-    void cambiarRating(int r);
-    void cambiarComentario(std::string c);
 };
 
 // Getters
-   int Review::getRating() {
-       return rating;
-   }
-   std::string Review::getComentario() {
-       return comentario;
-   }
 
-   // Setters
-   void Review::setRating(int r) {
-       if (r >= 0 && r <= 10) { // por ejemplo, escala 0-10
-           rating = r;
-       }
-   }
-   void Review::setComentario(std::string c) {
-       comentario = c;
-   }
+/**
+ * getter rating
+ *
+ * @param
+ * @return int: rating
+ */
+int Review::getRating() {
+    return rating;
+}
 
-   // Métodos de actualización
-   void Review::cambiarRating(int r) {
-       setRating(r);
-   }
-   void Review::cambiarComentario(std::string c) {
-       comentario = c;
-   }
+/**
+ * getter comentario
+ *
+ * @param
+ * @return string: comentario
+ */
+std::string Review::getComentario() {
+    return comentario;
+}
+
+// Setters
+
+/**
+ * setter de rating
+ *
+ * param int r: nuevo rating
+ * a rating
+ */
+void Review::setRating(int r) {
+    rating = r;
+}
+
+/**
+ * setter de comentario
+ *
+ * @param: string c: nuevo comentario
+ * a comentario
+ */
+void Review::setComentario(std::string c) {
+    comentario = c;
+}
 
 #endif
